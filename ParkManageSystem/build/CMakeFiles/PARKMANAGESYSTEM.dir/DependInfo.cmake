@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/WorkSpace/C++/ParkManageSystem/src/Graph.cpp" "D:/WorkSpace/C++/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir/src/Graph.cpp.obj"
-  "D:/WorkSpace/C++/ParkManageSystem/src/Tourism.cpp" "D:/WorkSpace/C++/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir/src/Tourism.cpp.obj"
-  "D:/WorkSpace/C++/ParkManageSystem/src/main.cpp" "D:/WorkSpace/C++/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir/src/main.cpp.obj"
+  "D:/WorkSpace/DSA-recognization/ParkManageSystem/src/Graph.cpp" "D:/WorkSpace/DSA-recognization/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir/src/Graph.cpp.obj"
+  "D:/WorkSpace/DSA-recognization/ParkManageSystem/src/Tourism.cpp" "D:/WorkSpace/DSA-recognization/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir/src/Tourism.cpp.obj"
+  "D:/WorkSpace/DSA-recognization/ParkManageSystem/src/main.cpp" "D:/WorkSpace/DSA-recognization/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/WorkSpace/C++/HFMCompress/src/Compress.cpp" "D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj"
-  "D:/WorkSpace/C++/HFMCompress/src/Huffman.cpp" "D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj"
-  "D:/WorkSpace/C++/HFMCompress/src/main.cpp" "D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/HFMCompress.dir/src/main.cpp.obj"
+  "D:/WorkSpace/DSA-recognization/HFMCompress/src/Compress.cpp" "D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj"
+  "D:/WorkSpace/DSA-recognization/HFMCompress/src/Huffman.cpp" "D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj"
+  "D:/WorkSpace/DSA-recognization/HFMCompress/src/main.cpp" "D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles/HFMCompress.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
