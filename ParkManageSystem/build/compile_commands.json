@@ -1,0 +1,17 @@
+[
+{
+  "directory": "D:/WorkSpace/C++/ParkManageSystem/build",
+  "command": "C:/MinGW/bin/g++.exe   @CMakeFiles/PARKMANAGESYSTEM.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles/PARKMANAGESYSTEM.dir/src/Graph.cpp.obj -c D:/WorkSpace/C++/ParkManageSystem/src/Graph.cpp",
+  "file": "D:/WorkSpace/C++/ParkManageSystem/src/Graph.cpp"
+},
+{
+  "directory": "D:/WorkSpace/C++/ParkManageSystem/build",
+  "command": "C:/MinGW/bin/g++.exe   @CMakeFiles/PARKMANAGESYSTEM.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles/PARKMANAGESYSTEM.dir/src/Tourism.cpp.obj -c D:/WorkSpace/C++/ParkManageSystem/src/Tourism.cpp",
+  "file": "D:/WorkSpace/C++/ParkManageSystem/src/Tourism.cpp"
+},
+{
+  "directory": "D:/WorkSpace/C++/ParkManageSystem/build",
+  "command": "C:/MinGW/bin/g++.exe   @CMakeFiles/PARKMANAGESYSTEM.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles/PARKMANAGESYSTEM.dir/src/main.cpp.obj -c D:/WorkSpace/C++/ParkManageSystem/src/main.cpp",
+  "file": "D:/WorkSpace/C++/ParkManageSystem/src/main.cpp"
+}
+]

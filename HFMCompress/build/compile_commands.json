@@ -1,0 +1,17 @@
+[
+{
+  "directory": "D:/WorkSpace/C++/HFMCompress/build",
+  "command": "C:/MinGW/bin/g++.exe   @CMakeFiles/HFMCompress.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj -c D:/WorkSpace/C++/HFMCompress/src/Compress.cpp",
+  "file": "D:/WorkSpace/C++/HFMCompress/src/Compress.cpp"
+},
+{
+  "directory": "D:/WorkSpace/C++/HFMCompress/build",
+  "command": "C:/MinGW/bin/g++.exe   @CMakeFiles/HFMCompress.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj -c D:/WorkSpace/C++/HFMCompress/src/Huffman.cpp",
+  "file": "D:/WorkSpace/C++/HFMCompress/src/Huffman.cpp"
+},
+{
+  "directory": "D:/WorkSpace/C++/HFMCompress/build",
+  "command": "C:/MinGW/bin/g++.exe   @CMakeFiles/HFMCompress.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles/HFMCompress.dir/src/main.cpp.obj -c D:/WorkSpace/C++/HFMCompress/src/main.cpp",
+  "file": "D:/WorkSpace/C++/HFMCompress/src/main.cpp"
+}
+]

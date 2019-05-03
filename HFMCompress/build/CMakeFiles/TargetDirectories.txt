@@ -1,0 +1,3 @@
+D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/HFMCompress.dir
+D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/edit_cache.dir
+D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/rebuild_cache.dir
