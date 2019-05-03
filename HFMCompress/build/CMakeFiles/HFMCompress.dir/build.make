@@ -43,10 +43,10 @@ RM = "C:/Program Files/CMake/bin/cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:/WorkSpace/C++/HFMCompress
+CMAKE_SOURCE_DIR = D:/WorkSpace/DSA-recognization/HFMCompress
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:/WorkSpace/C++/HFMCompress/build
+CMAKE_BINARY_DIR = D:/WorkSpace/DSA-recognization/HFMCompress/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HFMCompress.dir/depend.make
@@ -60,44 +60,44 @@ include CMakeFiles/HFMCompress.dir/flags.make
 CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj: CMakeFiles/HFMCompress.dir/flags.make
 CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj: CMakeFiles/HFMCompress.dir/includes_CXX.rsp
 CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj: ../src/Compress.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/WorkSpace/C++/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj"
-	C:/MinGW/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj -c D:/WorkSpace/C++/HFMCompress/src/Compress.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj"
+	C:/MinGW/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HFMCompress.dir/src/Compress.cpp.obj -c D:/WorkSpace/DSA-recognization/HFMCompress/src/Compress.cpp
 
 CMakeFiles/HFMCompress.dir/src/Compress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HFMCompress.dir/src/Compress.cpp.i"
-	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/WorkSpace/C++/HFMCompress/src/Compress.cpp > CMakeFiles/HFMCompress.dir/src/Compress.cpp.i
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/WorkSpace/DSA-recognization/HFMCompress/src/Compress.cpp > CMakeFiles/HFMCompress.dir/src/Compress.cpp.i
 
 CMakeFiles/HFMCompress.dir/src/Compress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HFMCompress.dir/src/Compress.cpp.s"
-	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/WorkSpace/C++/HFMCompress/src/Compress.cpp -o CMakeFiles/HFMCompress.dir/src/Compress.cpp.s
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/WorkSpace/DSA-recognization/HFMCompress/src/Compress.cpp -o CMakeFiles/HFMCompress.dir/src/Compress.cpp.s
 
 CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj: CMakeFiles/HFMCompress.dir/flags.make
 CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj: CMakeFiles/HFMCompress.dir/includes_CXX.rsp
 CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj: ../src/Huffman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/WorkSpace/C++/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj"
-	C:/MinGW/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj -c D:/WorkSpace/C++/HFMCompress/src/Huffman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj"
+	C:/MinGW/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HFMCompress.dir/src/Huffman.cpp.obj -c D:/WorkSpace/DSA-recognization/HFMCompress/src/Huffman.cpp
 
 CMakeFiles/HFMCompress.dir/src/Huffman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HFMCompress.dir/src/Huffman.cpp.i"
-	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/WorkSpace/C++/HFMCompress/src/Huffman.cpp > CMakeFiles/HFMCompress.dir/src/Huffman.cpp.i
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/WorkSpace/DSA-recognization/HFMCompress/src/Huffman.cpp > CMakeFiles/HFMCompress.dir/src/Huffman.cpp.i
 
 CMakeFiles/HFMCompress.dir/src/Huffman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HFMCompress.dir/src/Huffman.cpp.s"
-	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/WorkSpace/C++/HFMCompress/src/Huffman.cpp -o CMakeFiles/HFMCompress.dir/src/Huffman.cpp.s
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/WorkSpace/DSA-recognization/HFMCompress/src/Huffman.cpp -o CMakeFiles/HFMCompress.dir/src/Huffman.cpp.s
 
 CMakeFiles/HFMCompress.dir/src/main.cpp.obj: CMakeFiles/HFMCompress.dir/flags.make
 CMakeFiles/HFMCompress.dir/src/main.cpp.obj: CMakeFiles/HFMCompress.dir/includes_CXX.rsp
 CMakeFiles/HFMCompress.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/WorkSpace/C++/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HFMCompress.dir/src/main.cpp.obj"
-	C:/MinGW/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HFMCompress.dir/src/main.cpp.obj -c D:/WorkSpace/C++/HFMCompress/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HFMCompress.dir/src/main.cpp.obj"
+	C:/MinGW/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HFMCompress.dir/src/main.cpp.obj -c D:/WorkSpace/DSA-recognization/HFMCompress/src/main.cpp
 
 CMakeFiles/HFMCompress.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HFMCompress.dir/src/main.cpp.i"
-	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/WorkSpace/C++/HFMCompress/src/main.cpp > CMakeFiles/HFMCompress.dir/src/main.cpp.i
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:/WorkSpace/DSA-recognization/HFMCompress/src/main.cpp > CMakeFiles/HFMCompress.dir/src/main.cpp.i
 
 CMakeFiles/HFMCompress.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HFMCompress.dir/src/main.cpp.s"
-	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/WorkSpace/C++/HFMCompress/src/main.cpp -o CMakeFiles/HFMCompress.dir/src/main.cpp.s
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/WorkSpace/DSA-recognization/HFMCompress/src/main.cpp -o CMakeFiles/HFMCompress.dir/src/main.cpp.s
 
 # Object files for target HFMCompress
 HFMCompress_OBJECTS = \
@@ -114,7 +114,7 @@ bin/HFMCompress.exe: CMakeFiles/HFMCompress.dir/src/main.cpp.obj
 bin/HFMCompress.exe: CMakeFiles/HFMCompress.dir/build.make
 bin/HFMCompress.exe: CMakeFiles/HFMCompress.dir/linklibs.rsp
 bin/HFMCompress.exe: CMakeFiles/HFMCompress.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/WorkSpace/C++/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/HFMCompress.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/HFMCompress.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/HFMCompress.dir/objects.a
 	C:/mingw/bin/ar.exe cr CMakeFiles/HFMCompress.dir/objects.a @CMakeFiles/HFMCompress.dir/objects1.rsp
 	C:/MinGW/bin/g++.exe -g   -Wl,--whole-archive CMakeFiles/HFMCompress.dir/objects.a -Wl,--no-whole-archive  -o bin/HFMCompress.exe -Wl,--out-implib,bin/libHFMCompress.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/HFMCompress.dir/linklibs.rsp
@@ -129,6 +129,6 @@ CMakeFiles/HFMCompress.dir/clean:
 .PHONY : CMakeFiles/HFMCompress.dir/clean
 
 CMakeFiles/HFMCompress.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" D:/WorkSpace/C++/HFMCompress D:/WorkSpace/C++/HFMCompress D:/WorkSpace/C++/HFMCompress/build D:/WorkSpace/C++/HFMCompress/build D:/WorkSpace/C++/HFMCompress/build/CMakeFiles/HFMCompress.dir/DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" D:/WorkSpace/DSA-recognization/HFMCompress D:/WorkSpace/DSA-recognization/HFMCompress D:/WorkSpace/DSA-recognization/HFMCompress/build D:/WorkSpace/DSA-recognization/HFMCompress/build D:/WorkSpace/DSA-recognization/HFMCompress/build/CMakeFiles/HFMCompress.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/HFMCompress.dir/depend
 

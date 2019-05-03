@@ -1,3 +1,3 @@
-D:/WorkSpace/C++/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir
-D:/WorkSpace/C++/ParkManageSystem/build/CMakeFiles/edit_cache.dir
-D:/WorkSpace/C++/ParkManageSystem/build/CMakeFiles/rebuild_cache.dir
+D:/WorkSpace/DSA-recognization/ParkManageSystem/build/CMakeFiles/PARKMANAGESYSTEM.dir
+D:/WorkSpace/DSA-recognization/ParkManageSystem/build/CMakeFiles/edit_cache.dir
+D:/WorkSpace/DSA-recognization/ParkManageSystem/build/CMakeFiles/rebuild_cache.dir
