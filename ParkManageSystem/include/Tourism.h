@@ -7,6 +7,10 @@
 class Tourism
 {
   public:
+	// 创建图
 	void createGraph(void);
+	// 得到景点信息
 	void getSpotInfo();
+	// 生成导航路线
+	void travelPath();
 };

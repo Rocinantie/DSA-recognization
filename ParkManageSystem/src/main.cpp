@@ -29,12 +29,17 @@ int main()
             tourism.getSpotInfo();
             break;
         case 3:
+            cout << "------- 旅游景点导航 -------\n";
+            tourism.travelPath();
             break;
         case 4:
+            cout << "------- 搜索最短路径 -------\n";
             break;
         case 5:
+            cout << "------- 铺设电缆规划 -------\n";
             break;
         case 0:
+            cout << "------- 感谢使用 -------\n";
             break;
         default:
             break;
