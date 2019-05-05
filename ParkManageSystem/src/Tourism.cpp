@@ -65,5 +65,4 @@ void Tourism::travelPath()
     delete myList;
     myList = nullptr;
     phead = nullptr;
-    std::cout << "end\n";
 }
