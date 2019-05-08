@@ -16,11 +16,22 @@ void Graph::init()
     FILE *pFile;
     int c;
     pFile = fopen("Edge.txt", "r");
-    while ((c = fgetc(pFile)) != EOF)
+    if (pFile == nullptr)
     {
+        perror("打开文件出错");
+    }
+    do
+    {
+        c = getc(pFile);
         if (c == '\n')
             number++;
-    }
+    } while (c != EOF);
+
+    // while ((c = fgetc(pFile)) != EOF)
+    // {
+    //     if (c == '\n')
+    //         number++;
+    // }
     fclose(pFile);
 }
 

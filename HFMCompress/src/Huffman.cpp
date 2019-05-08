@@ -103,23 +103,48 @@ Huffman::Huffman(string path)
     }
     int k = -1;
     int ch;
-    while ((ch = getc(in)) != EOF)
+    if (in == nullptr)
     {
-        bool f = false;
-        for (int j = 0; j <= k; j++)
-            if (data[j].key == ch)
-            {
-                data[j].value++;
-                f = true;
-                break;
-            }
-        if (f == false)
-        {
-            k++;
-            data[k].key = ch;
-            data[k].value++;
-        }
+        perror("打开文件时发生错误");
     }
+    do
+    {
+        ch = getc(in);
+        if (ch != EOF)
+        {
+            bool f = false;
+            for (int j = 0; j <= k; j++)
+                if (data[j].key == ch)
+                {
+                    data[j].value++;
+                    f = true;
+                    break;
+                }
+            if (f == false)
+            {
+                k++;
+                data[k].key = ch;
+                data[k].value++;
+            }
+        }
+    } while (ch != EOF);
+    // while ((ch = getc(in)) != EOF)
+    // {
+    //     bool f = false;
+    //     for (int j = 0; j <= k; j++)
+    //         if (data[j].key == ch)
+    //         {
+    //             data[j].value++;
+    //             f = true;
+    //             break;
+    //         }
+    //     if (f == false)
+    //     {
+    //         k++;
+    //         data[k].key = ch;
+    //         data[k].value++;
+    //     }
+    // }
     fclose(in);
     num = k + 1;
     valueSort(data, 0, num - 1);

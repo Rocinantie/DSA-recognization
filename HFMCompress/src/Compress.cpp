@@ -74,8 +74,13 @@ void Compress::print(Huffman h, string path)
     FILE *in = fopen(p, "rb");
     int ch;
     char cr = ' ';
-    while ((ch = getc(in)) != EOF)
+    if (in == nullptr)
     {
+        perror("打开文件出错");
+    }
+    do
+    {
+        ch = getc(in);
         string s = data[ch].code;
         while (s.length() >= 8)
         {
@@ -92,7 +97,27 @@ void Compress::print(Huffman h, string path)
             cr = (char)t;
             out << cr;
         }
-    }
+    } while (ch != EOF);
+
+    // while ((ch = getc(in)) != EOF)
+    // {
+    //     string s = data[ch].code;
+    //     while (s.length() >= 8)
+    //     {
+    //         cr = str2Byte(s);
+    //         out << cr;
+    //         s = s.substr(8);
+    //     }
+    //     if (s.length() > 0)
+    //     {
+    //         int t = 0;
+    //         for (int i = 0; i < s.length(); i++)
+    //             if (s[i] == '1')
+    //                 t = t + pow(2, s.length() - 1 - i);
+    //         cr = (char)t;
+    //         out << cr;
+    //     }
+    // }
     fclose(in);
 }
 
