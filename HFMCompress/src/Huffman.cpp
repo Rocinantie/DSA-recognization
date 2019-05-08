@@ -70,7 +70,7 @@ HuffNode *Huffman::makeHuffTree()
     return r;
 }
 
-void Huffman::makeHuffCode(HuffNode *p, string s)
+void Huffman::makeHuffCode(HuffNode *p, const string s)
 {
     if (isSon(p))
         for (int i = 0; i < num; i++)

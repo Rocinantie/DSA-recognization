@@ -121,6 +121,6 @@ void Graph::DFS(int nVex, bool bVisited[], int &index, pathList &pList)
 void Graph::DFSTraverse(int nVex, pathList &pList)
 {
     int index = 0;
-    aVisited[20] = {false};
+    aVisited[10] = {false};
     DFS(nVex, aVisited, index, pList);
 }
