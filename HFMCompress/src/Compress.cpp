@@ -28,10 +28,10 @@ void keySort(nodeData a[], int l, int r)
     int i = l, j = r;
     while (i < j)
     {
-        while ((a[j].key >= t.key) && (i < j))
+        while ((a[j].key >= t.key))
             j--;
         a[i] = a[j];
-        while ((a[i].key <= t.key) && (i < j))
+        while ((a[i].key <= t.key))
             i++;
         a[j] = a[i];
     }
@@ -59,7 +59,7 @@ void Compress::print(Huffman h, string path)
     int num = h.getNum();
     nodeData *data = h.getData();
     ofstream out(path + ".huf");
-    int s = 0;
+    // int s = 0;
     // cout << "BYTE\tCODE" << endl;
     for (int i = 0; i < num; i++)
     {
@@ -72,10 +72,15 @@ void Compress::print(Huffman h, string path)
     keySort(data, 0, num - 1);
     char *p = (char *)path.data();
     FILE *in = fopen(p, "rb");
-    int ch, pos = 0;
+    int ch;
     char cr = ' ';
-    while ((ch = getc(in)) != EOF)
+    if (in == nullptr)
     {
+        perror("打开文件出错");
+    }
+    do
+    {
+        ch = getc(in);
         string s = data[ch].code;
         while (s.length() >= 8)
         {
@@ -92,7 +97,28 @@ void Compress::print(Huffman h, string path)
             cr = (char)t;
             out << cr;
         }
-    }
+    } while (ch != EOF);
+
+    // while ((ch = getc(in)) != EOF)
+    // {
+    //     string s = data[ch].code;
+    //     while (s.length() >= 8)
+    //     {
+    //         cr = str2Byte(s);
+    //         out << cr;
+    //         s = s.substr(8);
+    //     }
+    //     if (s.length() > 0)
+    //     {
+    //         int t = 0;
+    //         for (int i = 0; i < s.length(); i++)
+    //             if (s[i] == '1')
+    //                 t = t + pow(2, s.length() - 1 - i);
+    //         cr = (char)t;
+    //         out << cr;
+    //     }
+    // }
+    fclose(in);
 }
 
 void Compress::initCompress(string path)
@@ -104,7 +130,7 @@ void Compress::initCompress(string path)
 int Compress::fileSize()
 {
     FILE *pFile;
-    long size;
+    long size = 0;
 
     pFile = fopen("Pic.bmp", "rb");
     if (pFile == nullptr)

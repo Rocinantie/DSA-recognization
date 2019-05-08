@@ -11,24 +11,33 @@ using namespace std;
 
 int number;
 
-// 初始化边的数目
 void Graph::init()
 {
     FILE *pFile;
     int c;
     pFile = fopen("Edge.txt", "r");
-    while ((c = fgetc(pFile)) != EOF)
+    if (pFile == nullptr)
     {
+        perror("打开文件出错");
+    }
+    do
+    {
+        c = getc(pFile);
         if (c == '\n')
             number++;
-    }
+    } while (c != EOF);
+
+    // while ((c = fgetc(pFile)) != EOF)
+    // {
+    //     if (c == '\n')
+    //         number++;
+    // }
+    fclose(pFile);
 }
 
-// 为边分配内存空间
-// Edge *pEdge = new Edge[number];
 Edge pEdge[10];
+bool aVisited[20];
 
-// 初始化景点信息
 void Graph::initialize()
 {
     ifstream inputVex("Vex.txt");
@@ -47,7 +56,6 @@ void Graph::initialize()
     }
 }
 
-// 打印景点信息
 void Graph::print()
 {
     cout << "景点数目：" << vexNum << endl;
@@ -63,7 +71,6 @@ void Graph::print()
              << " " << pEdge[i].weight << endl;
     }
 }
-// 返回景点信息
 Vex Graph::getVex(int v)
 {
     return vexs[v];
@@ -81,4 +88,50 @@ int Graph::findEdge(int v)
         }
     }
     return k;
+}
+
+int Graph::getVexNumber()
+{
+    return this->vexNum;
+}
+void Graph::DFS(int nVex, bool bVisited[], int &index, pathList &pList)
+{
+    aVisited[nVex] = true;
+    pList->vexs[index++] = nVex;
+    int all = 0;
+    for (int i = 0; i < vexNum; ++i)
+    {
+        if (aVisited[i])
+            all++;
+    }
+    if (all == vexNum)
+    {
+        pList->pNext = new Path;
+        for (int i = 0; i < vexNum; ++i)
+        {
+            pList->pNext->vexs[i] = pList->vexs[i];
+        }
+        pList = pList->pNext;
+        pList->pNext = nullptr;
+    }
+    else
+    {
+
+        for (int i = 0; i < vexNum; ++i)
+        {
+            if (ajdMatrix[nVex][i] != 0 && !bVisited[i])
+            {
+                DFS(i, aVisited, index, pList);
+                bVisited[i] = false;
+                index--;
+            }
+        }
+    }
+}
+
+void Graph::DFSTraverse(int nVex, pathList &pList)
+{
+    int index = 0;
+    aVisited[10] = {false};
+    DFS(nVex, aVisited, index, pList);
 }
