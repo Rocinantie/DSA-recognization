@@ -3,25 +3,31 @@
 //
 
 #include "../include/Huffman.h"
-#include<string>
-#include<iostream>
+#include <string>
+#include <iostream>
 #include <fstream>
 #include <bitset>
 
 using namespace std;
 
-bool isSon(HuffNode *p) {
+bool isSon(HuffNode *p)
+{
     return (p->left == p) && (p->right == p);
 }
 
-void valueSort(nodeData a[], int l, int r) {
-    if (l >= r) return;
+void valueSort(nodeData a[], int l, int r)
+{
+    if (l >= r)
+        return;
     nodeData t = a[l];
     int i = l, j = r;
-    while (i < j) {
-        while ((a[j].value >= t.value) && (i < j)) j--;
+    while (i < j)
+    {
+        while ((i < j) && (a[j].value >= t.value))
+            j--;
         a[i] = a[j];
-        while ((a[i].value <= t.value) && (i < j)) i++;
+        while ((i < j) && (a[i].value <= t.value))
+            i++;
         a[j] = a[i];
     }
     a[i] = t;
@@ -29,16 +35,19 @@ void valueSort(nodeData a[], int l, int r) {
     valueSort(a, i + 1, r);
 }
 
-HuffNode *Huffman::makeHuffTree() {
+HuffNode *Huffman::makeHuffTree()
+{
     nodeSize = num;
     HuffNode *p, *q, *r = new HuffNode(-2);
-    for (int i = 0; i < num; i++) {
+    for (int i = 0; i < num; i++)
+    {
         node[i]->data = data[i];
         node[i]->left = node[i];
         node[i]->right = node[i];
         node[i]->parent = node[i];
     }
-    while (nodeSize > 1) {
+    while (nodeSize > 1)
+    {
         p = select(0);
         q = select(1);
         int nw = p->data.value + q->data.value;
@@ -51,7 +60,8 @@ HuffNode *Huffman::makeHuffTree() {
             node[i] = node[i + 2];
         int i = 0;
         for (i = 0; i < nodeSize - 2; i++)
-            if (nw <= node[i]->data.value) break;
+            if (nw <= node[i]->data.value)
+                break;
         for (int j = nodeSize - 2; j > i; j--)
             node[j] = node[j - 1];
         node[i] = r;
@@ -60,44 +70,51 @@ HuffNode *Huffman::makeHuffTree() {
     return r;
 }
 
-void Huffman::makeHuffCode(HuffNode *p, string s) {
+void Huffman::makeHuffCode(HuffNode *p, string s)
+{
     if (isSon(p))
         for (int i = 0; i < num; i++)
-            if (p->data.key == data[i].key) {
+            if (p->data.key == data[i].key)
+            {
                 data[i].code = s;
                 break;
             }
-    if (!isSon(p)) {
+    if (!isSon(p))
+    {
         makeHuffCode(p->left, s + "0");
         makeHuffCode(p->right, s + "1");
     }
 }
 
-
-
-HuffNode *Huffman::select(int i) {
+HuffNode *Huffman::select(int i)
+{
     return node[i];
 }
 
-Huffman::Huffman(string path) {
-    char *p = (char *) path.data();
+Huffman::Huffman(string path)
+{
+    char *p = (char *)path.data();
     FILE *in = fopen(p, "rb");
-    for (int i = 0; i < 256; i++) {
+    for (int i = 0; i < 256; i++)
+    {
         data[i].key = i;
         data[i].value = 0;
         data[i].code = "";
     }
     int k = -1;
     int ch;
-    while ((ch = getc(in)) != EOF) {
+    while ((ch = getc(in)) != EOF)
+    {
         bool f = false;
         for (int j = 0; j <= k; j++)
-            if (data[j].key == ch) {
+            if (data[j].key == ch)
+            {
                 data[j].value++;
                 f = true;
                 break;
             }
-        if (f == false) {
+        if (f == false)
+        {
             k++;
             data[k].key = ch;
             data[k].value++;
@@ -111,11 +128,13 @@ Huffman::Huffman(string path) {
     makeHuffCode(makeHuffTree(), "");
 }
 
-int Huffman::getNum() {
+int Huffman::getNum()
+{
     return num;
 }
 
-nodeData *Huffman::getData() {
+nodeData *Huffman::getData()
+{
     return data;
 }
 

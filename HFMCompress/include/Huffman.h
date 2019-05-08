@@ -2,21 +2,24 @@
 // Created by Rocinantie on 2019/4/23.
 //
 
-#include<string>
+#include <string>
 
 using namespace std;
-struct nodeData {
+struct nodeData
+{
     int key, value;
     string code;
 };
 
-struct HuffNode {
+struct HuffNode
+{
     HuffNode *parent;
     HuffNode *left;
     HuffNode *right;
     nodeData data;
 
-    HuffNode() {
+    HuffNode()
+    {
         data.key = -1;
         data.value = -1;
         parent = this;
@@ -24,7 +27,8 @@ struct HuffNode {
         right = this;
     }
 
-    HuffNode(int w) {
+    HuffNode(int w)
+    {
         data.key = -1;
         data.value = w;
         parent = this;
@@ -32,7 +36,8 @@ struct HuffNode {
         right = this;
     }
 
-    HuffNode(int i, int w) {
+    HuffNode(int i, int w)
+    {
         data.key = i;
         data.value = w;
         parent = this;
@@ -41,11 +46,13 @@ struct HuffNode {
     }
 };
 
-class Huffman {
+class Huffman
+{
 private:
     nodeData data[256];
     HuffNode *node[256];
     int num, nodeSize;
+
 public:
     nodeData *getData();
 
@@ -61,4 +68,3 @@ public:
 
     ~Huffman();
 };
-

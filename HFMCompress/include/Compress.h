@@ -4,12 +4,13 @@
 
 #pragma once
 
-#include<string>
-#include"Huffman.h"
+#include <string>
+#include "Huffman.h"
 
 using namespace std;
 
-class Compress {
+class Compress
+{
 public:
     Compress();
 
@@ -23,4 +24,3 @@ public:
 
     ~Compress();
 };
-

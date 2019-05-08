@@ -21,6 +21,7 @@ void Graph::init()
         if (c == '\n')
             number++;
     }
+    fclose(pFile);
 }
 
 Edge pEdge[10];
