@@ -18,7 +18,7 @@ void Graph::init()
     pFile = fopen("Edge.txt", "r");
     if (pFile == nullptr)
     {
-        perror("打开文件出错");
+        perror("-打开文件出错");
     }
     do
     {
@@ -58,7 +58,7 @@ void Graph::initialize()
 
 void Graph::print()
 {
-    cout << "景点数目：" << vexNum << endl;
+    cout << "-景点数目：" << vexNum << endl;
     cout << "---- 景点信息 ----\n";
     for (int i = 0; i < vexNum; i++)
     {
