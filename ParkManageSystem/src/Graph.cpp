@@ -23,15 +23,13 @@ void Graph::init()
     do
     {
         c = getc(pFile);
+        if (c > 1600000)
+        {
+            break;
+        }
         if (c == '\n')
             number++;
     } while (c != EOF);
-
-    // while ((c = fgetc(pFile)) != EOF)
-    // {
-    //     if (c == '\n')
-    //         number++;
-    // }
     fclose(pFile);
 }
 
@@ -58,7 +56,7 @@ void Graph::initialize()
 
 void Graph::print()
 {
-    cout << "景点数目：" << vexNum << endl;
+    cout << "-景点数目：" << vexNum << endl;
     cout << "---- 景点信息 ----\n";
     for (int i = 0; i < vexNum; i++)
     {

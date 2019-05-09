@@ -59,13 +59,6 @@ void Compress::print(Huffman h, string path)
     int num = h.getNum();
     nodeData *data = h.getData();
     ofstream out(path + ".huf");
-    // int s = 0;
-    // cout << "BYTE\tCODE" << endl;
-    for (int i = 0; i < num; i++)
-    {
-        // cout << "0x" << hex << data[i].key << "\t" << data[i].code << endl;
-    }
-    // cout << "---------------------" << endl;
     int initialSize = fileSize();
     cout << "Size after compression:" << size << " bytes." << endl;
     cout << "Compress ratio:" << double(size * 1.0 / initialSize) * 100 << " %" << endl;
@@ -81,6 +74,10 @@ void Compress::print(Huffman h, string path)
     do
     {
         ch = getc(in);
+        if (ch > 1600000)
+        {
+            break;
+        }
         string s = data[ch].code;
         while (s.length() >= 8)
         {
@@ -98,26 +95,6 @@ void Compress::print(Huffman h, string path)
             out << cr;
         }
     } while (ch != EOF);
-
-    // while ((ch = getc(in)) != EOF)
-    // {
-    //     string s = data[ch].code;
-    //     while (s.length() >= 8)
-    //     {
-    //         cr = str2Byte(s);
-    //         out << cr;
-    //         s = s.substr(8);
-    //     }
-    //     if (s.length() > 0)
-    //     {
-    //         int t = 0;
-    //         for (int i = 0; i < s.length(); i++)
-    //             if (s[i] == '1')
-    //                 t = t + pow(2, s.length() - 1 - i);
-    //         cr = (char)t;
-    //         out << cr;
-    //     }
-    // }
     fclose(in);
 }
 

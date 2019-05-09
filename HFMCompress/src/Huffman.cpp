@@ -110,6 +110,10 @@ Huffman::Huffman(string path)
     do
     {
         ch = getc(in);
+        if (ch > 16000000)
+        {
+            break;
+        }
         if (ch != EOF)
         {
             bool f = false;
