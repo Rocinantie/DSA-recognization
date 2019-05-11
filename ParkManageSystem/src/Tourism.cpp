@@ -108,7 +108,7 @@ void Tourism::pathDesign()
     graph.findMinTree(mypath);
     int allLength = 0;
     int vexNum = graph.getVexNumber();
-    std::cout << "在以下各店之间铺设电缆\n";
+    std::cout << "在以下各点之间铺设电缆\n";
     for (int i = 0; i < vexNum - 1; ++i)
     {
         Vex Vex1 = graph.getVex(mypath[i].vex1);
