@@ -95,9 +95,26 @@ void Tourism::findShortPath()
     {
         vexes = graph.getVex(mypath[i].vex2);
         std::cout << vexes.name;
-        if (i < Num-1)
+        if (i < Num - 1)
             std::cout << "->";
         Length += mypath[i].weight;
     }
     std::cout << "\n最短距离为" << Length << "\n";
+}
+
+void Tourism::pathDesign()
+{
+    Edge mypath[20];
+    graph.findMinTree(mypath);
+    int allLength = 0;
+    int vexNum = graph.getVexNumber();
+    std::cout << "在以下各店之间铺设电缆\n";
+    for (int i = 0; i < vexNum - 1; ++i)
+    {
+        Vex Vex1 = graph.getVex(mypath[i].vex1);
+        Vex Vex2 = graph.getVex(mypath[i].vex2);
+        std::cout << Vex1.name << "--" << Vex2.name << " " << mypath[i].weight << "m\n";
+        allLength += mypath[i].weight;
+    }
+    std::cout << "铺设电缆的总长度为" << allLength << "m\n";
 }

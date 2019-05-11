@@ -15,4 +15,6 @@ public:
 	void travelPath();
 	// 搜索最短路径
 	void findShortPath();
+	// 铺设电缆规划
+	void pathDesign();
 };

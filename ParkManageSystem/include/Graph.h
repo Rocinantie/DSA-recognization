@@ -57,4 +57,6 @@ public:
 	void DFSTraverse(int nVex, pathList &pList);
 	// 搜索最短路径
 	int findShortestPath(int vexStart, int vexEnd, Edge path[]);
+	// 最小生成树
+	void findMinTree(Edge path[]);
 };

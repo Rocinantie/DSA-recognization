@@ -159,10 +159,9 @@ int Graph::findShortestPath(int vexStart, int vexEnd, Edge path[])
         }
     }
     aVisited[vexStart] = true;
-    int min;
     for (int i = 1; i < vexNum; ++i)
     {
-        min = 0x7fffffff;
+        int min = 0x7fffffff;
         bool add = false;
         for (int w = 0; w < vexNum; ++w)
         {
@@ -184,7 +183,7 @@ int Graph::findShortestPath(int vexStart, int vexEnd, Edge path[])
         shortestPath[v][i] = v;
         for (int w = 0; w < vexNum; ++w)
         {
-            if (!aVisited[w] && (min + ajdMatrix[v][w] < shortestDistance[w]) && ajdMatrix[v][w]!=0)
+            if (!aVisited[w] && (min + ajdMatrix[v][w] < shortestDistance[w]) && ajdMatrix[v][w] != 0)
             {
                 shortestDistance[w] = min + ajdMatrix[v][w];
                 for (int i = 0; i < vexNum; ++i)
@@ -208,4 +207,43 @@ int Graph::findShortestPath(int vexStart, int vexEnd, Edge path[])
         }
     }
     return Index;
+}
+
+void Graph::findMinTree(Edge path[])
+{
+    bool aVisited[20];
+    for (int i = 0; i < vexNum; ++i)
+    {
+        aVisited[i] = false;
+    }
+    aVisited[0] = true;
+    int min;
+    int Vex1, Vex2;
+    for (int k = 0; k < vexNum - 1; ++k)
+    {
+        min = 0x7fffffff;
+        for (int i = 0; i < vexNum; ++i)
+        {
+            if (aVisited[i])
+            {
+                for (int j = 0; j < vexNum; ++j)
+                {
+                    if (!aVisited[j])
+                    {
+                        if ((ajdMatrix[i][j] < min) && (ajdMatrix[i][j] != 0))
+                        {
+                            Vex1 = i;
+                            Vex2 = j;
+                            min = ajdMatrix[i][j];
+                        }
+                    }
+                }
+            }
+        }
+        path[k].vex1 = Vex1;
+        path[k].vex2 = Vex2;
+        path[k].weight = ajdMatrix[Vex1][Vex2];
+        aVisited[Vex1] = true;
+        aVisited[Vex2] = true;
+    }
 }
