@@ -18,11 +18,13 @@ void Tourism::createGraph()
 void Tourism::getSpotInfo()
 {
     int choice;
-    for (int i = 0; i < 7; i++)
+    int num = graph.getVexNumber();
+    std::cout << "景点数目为：" << num << std::endl;
+    for (int i = 0; i < num; i++)
     {
         std::cout << i << "-" << graph.getVex(i).name << std::endl;
     }
-    std::cout << "-请输入要查询的景点\n";
+    std::cout << "请输入要查询的景点\n";
     std::cin >> choice;
     std::cout << graph.getVex(choice).name << "\n"
               << graph.getVex(choice).description << "\n";
@@ -36,15 +38,15 @@ void Tourism::travelPath()
     int num = graph.getVexNumber();
     pathList myList = new Path;
     pathList phead = myList;
-    std::cout << "-景点数目为：" << num << std::endl;
+    std::cout << "景点数目为：" << num << std::endl;
     for (int i = 0; i < 7; i++)
     {
         std::cout << i << "-" << graph.getVex(i).name << std::endl;
     }
-    std::cout << "-请输入起始景点\n";
+    std::cout << "请输入起始景点\n";
     std::cin >> choice;
     graph.DFSTraverse(choice, myList);
-    std::cout << "-导航路线为\n";
+    std::cout << "导航路线为\n";
     int i = 1;
     myList = phead;
     while (myList->pNext)
@@ -65,4 +67,37 @@ void Tourism::travelPath()
     delete myList;
     myList = nullptr;
     phead = nullptr;
+}
+
+void Tourism::findShortPath()
+{
+    int num = graph.getVexNumber();
+    for (int i = 0; i < num; i++)
+    {
+        std::cout << i << "-" << graph.getVex(i).name << std::endl;
+    }
+    int vexStart, vexEnd;
+    std::cout << "请输入起点编号";
+    std::cin >> vexStart;
+    std::cout << "请输入终点编号";
+    std::cin >> vexEnd;
+    if (vexStart < 0 || vexStart > num || vexEnd < 0 || vexEnd > num)
+    {
+        std::cout << "编号错误！\n";
+    }
+    Edge mypath[20];
+    int Num = graph.findShortestPath(vexStart, vexEnd, mypath);
+    Vex vexes = graph.getVex(mypath[0].vex1);
+    int Length = 0;
+    std::cout << "最短路径为：\n";
+    std::cout << vexes.name << "->";
+    for (int i = 0; i < Num; ++i)
+    {
+        vexes = graph.getVex(mypath[i].vex2);
+        std::cout << vexes.name;
+        if (i < Num-1)
+            std::cout << "->";
+        Length += mypath[i].weight;
+    }
+    std::cout << "\n最短距离为" << Length << "\n";
 }

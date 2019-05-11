@@ -56,7 +56,7 @@ void Graph::initialize()
 
 void Graph::print()
 {
-    cout << "-景点数目：" << vexNum << endl;
+    cout << "景点数目：" << vexNum << endl;
     cout << "---- 景点信息 ----\n";
     for (int i = 0; i < vexNum; i++)
     {
@@ -132,4 +132,80 @@ void Graph::DFSTraverse(int nVex, pathList &pList)
     int index = 0;
     aVisited[10] = {false};
     DFS(nVex, aVisited, index, pList);
+}
+
+int Graph::findShortestPath(int vexStart, int vexEnd, Edge path[])
+{
+    int shortestPath[20][20];
+    int shortestDistance[20];
+    bool aVisited[20];
+    int v;
+
+    for (v = 0; v < vexNum; ++v)
+    {
+        aVisited[v] = false;
+        if (ajdMatrix[vexStart][v])
+        {
+            shortestDistance[v] = ajdMatrix[vexStart][v];
+        }
+        else
+        {
+            shortestDistance[v] = 0x7fffffff;
+        }
+        shortestPath[v][0] = vexStart;
+        for (int w = 1; w < vexNum; ++w)
+        {
+            shortestPath[v][w] = -1;
+        }
+    }
+    aVisited[vexStart] = true;
+    int min;
+    for (int i = 1; i < vexNum; ++i)
+    {
+        min = 0x7fffffff;
+        bool add = false;
+        for (int w = 0; w < vexNum; ++w)
+        {
+            if (!aVisited[w])
+            {
+                if (shortestDistance[w] < min)
+                {
+                    v = w;
+                    min = shortestDistance[w];
+                    add = true;
+                }
+            }
+        }
+        if (!add)
+        {
+            break;
+        }
+        aVisited[v] = true;
+        shortestPath[v][i] = v;
+        for (int w = 0; w < vexNum; ++w)
+        {
+            if (!aVisited[w] && (min + ajdMatrix[v][w] < shortestDistance[w]) && ajdMatrix[v][w]!=0)
+            {
+                shortestDistance[w] = min + ajdMatrix[v][w];
+                for (int i = 0; i < vexNum; ++i)
+                {
+                    shortestPath[w][i] = shortestPath[v][i];
+                }
+            }
+        }
+    }
+    int Index = 0;
+    int Vex1 = vexStart;
+    for (int i = 1; i < vexNum; ++i)
+    {
+        if (shortestPath[vexEnd][i] != -1)
+        {
+            path[Index].vex1 = Vex1;
+            path[Index].vex2 = shortestPath[vexEnd][i];
+            path[Index].weight = ajdMatrix[path[Index].vex1][path[Index].vex2];
+            Vex1 = shortestPath[vexEnd][i];
+            Index++;
+        }
+    }
+    return Index;
 }
