@@ -55,4 +55,8 @@ public:
 	void DFS(int nVex, bool bVisited[], int &index, pathList &pList);
 	// 深度优先遍历图
 	void DFSTraverse(int nVex, pathList &pList);
+	// 搜索最短路径
+	int findShortestPath(int vexStart, int vexEnd, Edge path[]);
+	// 最小生成树
+	void findMinTree(Edge path[]);
 };
